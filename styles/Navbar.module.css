@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 5%; 
+    background-color: #ffffff; 
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center; 
+    gap: 50px; 
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #000000; 
+    opacity: 95%;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .nav-button:hover {
+    background-color: #f0f0f0; 
+  }
+  
+  .home-button {
+    background-color: #4F8DDE; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+  }
+  
+  .home-button:hover {
+    background-color: #112A67; 
+  }
+  
