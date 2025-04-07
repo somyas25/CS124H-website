@@ -19,7 +19,7 @@ const Navbar = () => {
               <button className={styles["nav-button"]}>Timeline</button>
             </Link>
             <Link href="/">
-              <button className={styles["home-button"]}>Home</button>
+              <button className={styles["home-button"]}>Home </button>
             </Link>
           </div>
         </nav>
