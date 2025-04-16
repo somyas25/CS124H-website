@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  body {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Playfair Display", serif;
+    background-color:#1E3877;
+  }
+h1{
+  color: #f9f9f9;
+}
+p {
+  color: #f9f9f9;
+  margin-top: 20px;
+}
