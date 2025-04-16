@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar.js';
-import '../styles/global.css'
+// import '../styles/global.css'
 
 export default function Home() {
   return (

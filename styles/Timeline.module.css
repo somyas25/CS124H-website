@@ -1,4 +1,4 @@
-.container {
+  .container {
     min-height: 100vh;
     background-color: #0f1b3d;
   }
@@ -23,7 +23,7 @@
   }
   
   .greyBox {
-    background-color: #d1d5db; /* Tailwind's gray-300 */
+    background-color: #d1d5db; 
     border-radius: 1rem;
     padding: 1rem;
     flex: 1;
@@ -37,4 +37,8 @@
     flex: 3;
     color: black;
     margin-bottom: 1.5rem;
+  }
+
+  .eventBoxText {
+    color: black;
   }
