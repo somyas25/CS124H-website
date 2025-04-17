@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.page {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+  overflow-y: auto;
+}
+
+.hero {
+  background: url('../asset/hero-bg.png') center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.heroButton {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.heroButton:hover {
+  background: white;
+  color: black;
+}
+
+.scrollSection {
+  padding: 3rem 1rem;
+  background: #0046ad;
+  min-height: 100vh;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cardRow {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  background: url('../asset/card-bg.png') center center / cover no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  scroll-snap-align: start;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
