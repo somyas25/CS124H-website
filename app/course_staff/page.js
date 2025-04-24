@@ -36,24 +36,46 @@ const staffMembers = [
   }
 ];
 
+export default function CourseStaff() {
+  const [selectedMember, setSelectedMember] = useState(null);
 
-export default function Home() {
+  const openModal = (member) => setSelectedMember(member);
+  const closeModal = () => setSelectedMember(null);
+
   return (
     <div className="main-content">
-        <Navbar/>
-        <main>
-            <h1 className='title'>Welcome to Course Staff Page</h1>
-            <div className='staff-card-container'>
-              {staffMembers.map((member) => (
-                <div className='staff-card-box' key={member.id}>
-                  <div className='staff-image-box'>
-                    <img src={member.image} alt={member.name} />
-                  </div>
-                  <p className="staff-card-text">{member.name}</p>
-                </div>
-              ))}
+      <Navbar/>
+      <main>
+        <h1 className="title">Welcome to Course Staff Page</h1>
+        <div className="staff-card-container">
+          {staffMembers.map((member) => (
+            <div
+              className="staff-card-box"
+              key={member.id}
+              onClick={() => openModal(member)}
+            >
+              <div className="staff-image-box">
+                <img src={member.image} alt={member.name} />
+              </div>
+              <p className="staff-card-text">{member.name}</p>
             </div>
-        </main>
+          ))}
+        </div>
+      </main>
+
+      {selectedMember && (
+        <div className="popup" onClick={closeModal}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close" onClick={closeModal}>&times;</span>
+            <img src={selectedMember.image} alt={selectedMember.name} />
+            <div className="popup-text">
+              <h2>{selectedMember.name}</h2>
+              <h4>{selectedMember.role}</h4>
+              <p>{selectedMember.bio}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
