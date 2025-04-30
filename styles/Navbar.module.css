@@ -1,14 +1,14 @@
 .navbar {
     display: flex;
     justify-content: flex-end; 
-    padding: 10px 5%; 
-    background-color: #ffffff; 
+    padding: 10px 0; 
+    background-color: #626286;
   }
   
   .nav-items {
     display: flex;
     align-items: center; 
-    gap: 50px; 
+    gap: 50px;
   }
   
   .nav-button {
@@ -35,4 +35,10 @@
   .home-button:hover {
     background-color: #112A67; 
   }
+
+  .active {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-underline-offset: 8px;
+  }  
   
