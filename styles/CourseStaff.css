@@ -1,14 +1,16 @@
+
 .title{
     text-align: center;
     margin-top: 40px; 
     font-size: 50px;
-
 }
+
 .staff-card-container {
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
 }
+
 .staff-card-box {
     background-color: #FF9A35;
     height: 400px;
@@ -153,7 +155,6 @@
     line-height: 1.5;
   }
   
-
   .close {
     position: absolute;
     top: 10px;
@@ -171,3 +172,4 @@
     margin-left: 20px;
     border-radius: 3px;
   }
+

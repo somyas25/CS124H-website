@@ -22,17 +22,20 @@ body {
     font-family: "Playfair Display", serif;
     background-color:#1E3877;
   }
-  h1{
-    color: #f9f9f9;
-    font-family: "Kufam", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: auto;
-    font-style: normal;
-  }
-  p {
-    color: #f9f9f9;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: auto;
-    font-style: normal;
-  }
+
+h1{
+  color: #f9f9f9;
+  font-family: "Kufam", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+p {
+  color: #f9f9f9;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
