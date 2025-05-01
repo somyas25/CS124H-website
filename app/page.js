@@ -3,6 +3,7 @@ import Navbar from '../components/navbar.js';
 import '../styles/global.css'
 import '../styles/Homepage.css'
 
+
 export default function Home() {
   return (
     <div>
