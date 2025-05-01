@@ -58,22 +58,19 @@ const staffMembers = [
 ];
 
 export default function Home() {
-  const [expandedId, setExpandedId] = useState(null);
+  const [selectedMember, setSelectedMember] = useState(null);
 
-  const handleCardClick = (id) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
-
-  console.log("Expanded ID:", expandedId);
+  const openModal = (member) => setSelectedMember(member);
+  const closeModal = () => setSelectedMember(null);
   
   return (
     <div className="main-content">
         <Navbar/>
         <main>
-            <h1 className={`title ${expandedId ? 'opacity-20' : 'opacity-100'}`}>Our Staff</h1>
-            <div className={`staff-card-container ${expandedId ? 'opacity-20' : 'opacity-100'}`}>
+            <h1 className={`title ${selectedMember ? 'opacity-20' : 'opacity-100'}`}>Our Staff</h1>
+            <div className={`staff-card-container ${selectedMember ? 'opacity-20' : 'opacity-100'}`}>
               {staffMembers.map((member) => (
-                <div className='staff-card-box' key={member.id} onClick={() => handleCardClick(member.id)}>
+                <div className='staff-card-box' key={member.id} onClick={() => openModal(member.id)}>
                   <div className='staff-image-box'>
                     <img src={member.image} alt={member.name} />
                   </div>
@@ -82,19 +79,17 @@ export default function Home() {
               ))}
             </div>
 
-            {expandedId && (
-              <div className="popup" onClick={() => setExpandedId(null)}>
+            {selectedMember && (
+              <div className="popup" onClick={closeModal}>
                 <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                  <span className="close" onClick={closeModal}>&times;</span>
                   {staffMembers
-                    .filter((member) => member.id === expandedId)
+                    .filter((member) => member.id === selectedMember)
                     .map((member) => (
                       <React.Fragment key={member.id}>
                         <div className="image-popup">
                           <img src={member.image} alt={member.name} />
                         </div>
-
-                        {/* <div className="divider" /> */}
-
                         <div className="text-content">
                           <h2>{member.name}</h2>
                           <p className="role">{member.role}</p>
@@ -110,8 +105,6 @@ export default function Home() {
 
                           <div className="bio">{member.bio}</div>
                         </div>
-
-                        <button className="close" onClick={() => setExpandedId(null)}>x</button>
                       </React.Fragment>
                     ))}
                 </div>
