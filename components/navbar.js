@@ -32,7 +32,7 @@ const Navbar = () => {
           </button>
         </Link>
         <Link href="/">
-          <button className={`${styles["home-button"]} ${pathname === '/' ? styles.active : ''}`}>
+          <button className={`${styles["home-button"]} ${pathname === '/'}`}>
             Home
           </button>
         </Link>
