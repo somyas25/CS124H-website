@@ -3,60 +3,60 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/navbar.js';
 import '../../styles/CourseStaff.css';
-import spongebobImg from '../../public/spongebob.jpg';
+import staffMembers from "../../public/staff_data.json"
 
-const staffMembers = [
-  {
-    id: 1,
-    name: "Spongebob Squarepants",
-    role: "Senior Developer",
-    image: "/images/spongebob.jpg",
-    year: "Senior",
-    major: "CS+Marine",
-    semesters: "4",
-    bio: "He's a SPONGE."
-  },
-  {
-    id: 2,
-    name: "Patrick Star",
-    role: "UX Designer",
-    image: "/images/patrick.jpg",
-    year: "Sophomore",
-    major: "Information Sciences",
-    semesters: "2",
-    bio: "He's the star of the team!"
-  },
-  {
-    id: 3,
-    name: "Squidward Tentacles",
-    role: "Product Manager",
-    image: "/images/squidward.jpg",
-    year: "Junior",
-    major: "Business",
-    semesters: "3",
-    bio: "Nothing can escape his grasp."
-  },
-  {
-    id: 4,
-    name: "Eugene Krabs",
-    role: "Backend Engineer",
-    image: "/images/krabs.jpg",
-    year: "Junior",
-    major: "CS+Statistics",
-    semesters: "2",
-    bio: "Don't anger him, else he will pinch you!"
-  },
-  {
-    id: 5,
-    name: "Sandy Cheeks",
-    role: "UX Designer",
-    image: "/images/sandy.jpg",
-    year: "Junior",
-    major: "CS+Philosophy",
-    semesters: "2",
-    bio: "Flowers!"
-  }
-];
+// const staffMembers = [
+//   {
+//     id: 1,
+//     name: "Spongebob Squarepants",
+//     role: "Senior Developer",
+//     image: "/images/spongebob.jpg",
+//     year: "Senior",
+//     major: "CS+Marine",
+//     semesters: "4",
+//     bio: "He's a SPONGE."
+//   },
+//   {
+//     id: 2,
+//     name: "Patrick Star",
+//     role: "UX Designer",
+//     image: "/images/patrick.jpg",
+//     year: "Sophomore",
+//     major: "Information Sciences",
+//     semesters: "2",
+//     bio: "He's the star of the team!"
+//   },
+//   {
+//     id: 3,
+//     name: "Squidward Tentacles",
+//     role: "Product Manager",
+//     image: "/images/squidward.jpg",
+//     year: "Junior",
+//     major: "Business",
+//     semesters: "3",
+//     bio: "Nothing can escape his grasp."
+//   },
+//   {
+//     id: 4,
+//     name: "Eugene Krabs",
+//     role: "Backend Engineer",
+//     image: "/images/krabs.jpg",
+//     year: "Junior",
+//     major: "CS+Statistics",
+//     semesters: "2",
+//     bio: "Don't anger him, else he will pinch you!"
+//   },
+//   {
+//     id: 5,
+//     name: "Sandy Cheeks",
+//     role: "UX Designer",
+//     image: "/images/sandy.jpg",
+//     year: "Junior",
+//     major: "CS+Philosophy",
+//     semesters: "2",
+//     bio: "Flowers!"
+//   }
+// ];
 
 export default function Home() {
   const [selectedMember, setSelectedMember] = useState(null);
@@ -70,7 +70,7 @@ export default function Home() {
         <main>
             <h1 className={`title ${selectedMember ? 'opacity-20' : 'opacity-100'}`}>Our Staff</h1>
             <div className={`staff-card-container ${selectedMember ? 'opacity-20' : 'opacity-100'}`}>
-              {staffMembers.map((member) => (
+              {staffMembers.data.map((member) => (
                 <div className='staff-card-box' key={member.id} onClick={() => openModal(member.id)}>
                   <div className='staff-image-box'>
                     <img src={member.image} alt={member.name} />
@@ -84,7 +84,7 @@ export default function Home() {
               <div className="popup" onClick={closeModal}>
                 <div className="popup-content" onClick={(e) => e.stopPropagation()}>
                   <span className="close" onClick={closeModal}>&times;</span>
-                  {staffMembers
+                  {staffMembers.data
                     .filter((member) => member.id === selectedMember)
                     .map((member) => (
                       <React.Fragment key={member.id}>

@@ -157,10 +157,10 @@ export default function HallOfFamePage() {
           <h1 className={styles.title}>
             Welcome to the Hall of Fame!
           </h1>
-          <p className={styles.description}>
+          {/* <p className={styles.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
-          </p>
+          </p> */}
         </div>
 
         {/* Semester Selection Tabs */}
