@@ -1,17 +1,20 @@
-import React from 'react';
-import Navbar from '../components/navbar.js';
-import '../styles/global.css'
-import '../styles/Homepage.css'
+import React from "react";
+import "../styles/global.css";
+import "../styles/Homepage.css";
+import dynamic from "next/dynamic";
 
+import NavbarWrapper from "../components/navbarWrapper";
 
 export default function Home() {
   return (
     <div>
-        <Navbar/>
-        <main className='main-container'>
-            <h1 className='title'>CS124Honors@Illinois</h1>
-            <p className='subtitle'>Illinois' premier freshman honors class run by students, for students.</p>
-        </main>
+      <NavbarWrapper />
+      <main className="main-container">
+        <h1 className="title">CS124Honors@Illinois</h1>
+        <p className="subtitle">
+          Illinois' premier freshman honors class run by students, for students.
+        </p>
+      </main>
     </div>
   );
 }
