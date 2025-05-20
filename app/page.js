@@ -32,7 +32,7 @@ export default function Home() {
             You will be a part of a welcoming community and expand your network
             and expertise through workshops, events, and other enriching
             opportunities. At the end of this journey, you will have brought a
-            project to life from start to finish.
+            project to life from start to finish!
           </p>
 
           <div className="video-wrapper">
