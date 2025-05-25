@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/navbar.js';
 import '../../styles/CourseStaff.css';
-import staffMembers from "../../public/staff_data.json"
+import staffMembers from "../../data/staff_data.json"
 
 // const staffMembers = [
 //   {
