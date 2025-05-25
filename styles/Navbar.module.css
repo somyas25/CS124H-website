@@ -1,41 +1,45 @@
 .navbar {
-    display: flex;
-    justify-content: flex-end; 
-    padding: 10px 0; 
-    background-color: #c0c0d3;
-  }
-  
-  .nav-items {
-    display: flex;
-    align-items: center; 
-    gap: 50px;
-  }
-  
-  .nav-button {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    color: #000000; 
-    opacity: 95%;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-  }
-  
-  .home-button {
-    background-color: #4F8DDE; 
-    color: white; 
-    padding: 10px 30px; 
-    border-radius: 5px; 
-    margin-right: 30px;
-  }
-  
-  .home-button:hover {
-    background-color: #112A67; 
-  }
+  display: flex;
+  justify-content: right;
+  padding: 0 5em;
+  background-color: #c0c0d3;
+  height: 3.5em;
+}
 
-  .active {
-    text-decoration: underline;
-    text-decoration-color: #ffffff;
-    text-underline-offset: 8px;
-  }  
-  
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-button,
+.nav-button a {
+  background-color: transparent;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  align-self: flex-start;
+  cursor: pointer;
+  font-size: medium;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: white;
+  background-color: #112a67;
+  text-decoration: none; /* Prevent underline on hover */
+}
+
+.nav-button.active {
+  background-color: hsl(223, 44%, 47%);
+  text-underline-offset: 8px;
+  color: white;
+}
+
+.home-button {
+  align-self: left;
+  background-color: #112a67;
+  color: white;
+}
