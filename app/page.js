@@ -11,7 +11,7 @@ export default function Home() {
       <NavbarWrapper />
       <main className="main-container">
         <div className="text-wrapper">
-          <h1 className="title">CS124Honors@Illinois</h1>
+          <h1 className="home-title">CS124Honors@Illinois</h1>
           <p className="subtitle">
             Illinois' premier freshman honors class run by students, for
             students.
